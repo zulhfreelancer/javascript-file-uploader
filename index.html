@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript File Uploader</title>
+</head>
+<body>
+    <form action="https://httpbin.org/post" method="post" enctype="multipart/form-data">
+        <input name="file" type="file" multiple>
+        <button type="submit">Upload</button>
+    </form>
+    <br>
+    <br>
+    <progress value="0" max="100"></progress>
+    <p>
+        <strong>Uploading status:</strong>
+        <span id="statusMessage">🤷‍♂ Nothing's uploaded</span>
+    </p>
+    <p>
+        <strong>Uploaded files:</strong>
+        <span id="fileNum">0</span>
+    </p>
+    <ul id="fileListMetadata"></ul>
+    <script src="index.js"></script>
+</body>
+</html>
